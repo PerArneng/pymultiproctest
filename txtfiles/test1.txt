@@ -1,0 +1,15 @@
+This client can be executed on the same machine with the server, or on a different machine, which can be located
+anywhere as long as it can reach the server by IP address. It will connect to the server and start pulling work
+from the job queue, placing results into the result queue. Theoretically, any amount of clients can connect
+simultaneously. The beauty of this method is that it only uses the Python standard library, so the code is very much
+platform independent. I had a Windows client machine connecting a Linux server, which also had a client running,
+happily sharing the work between them. It just works.
+
+To summarize, I want to stress once again the goal of this post. Lest there be any misunderstanding, I'm not claiming
+this is the best way to do distributed programming in Python. It wouldn't be easy to find the "best way", since it's a
+complex problem domain with many tradeoffs, and many solutions that optimize for different things.
+
+However, it is useful to know that such capabilities exist in the Python standard library. The multiprocessing package
+provides many useful building blocks. These can be used together or separately to implement all kinds of interesting
+solutions both for paralellizing work across multiple processes and distributing it across different machines. All of
+this, as you saw above, without writing too much code.

@@ -1,0 +1,5 @@
+You can't get any better than that. After all, any solution will have to read the entire file, figure out how many
+ \n you have, and return that result.
+
+Do you have a better way of doing that without reading the entire file? Not sure... The best solution will always be
+I/O-bound, best you can do is make sure you don't use unnecessary memory, but it looks like you have that covered.
